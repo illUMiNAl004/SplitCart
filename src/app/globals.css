@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* brand colors from the logo */
+@theme {
+  --color-ink: #101114;
+  --color-surface: #17191d;
+  --color-raised: #1f2227;
+  --color-line: #2a2d33;
+  --color-lime: #c9f24b;
+  --color-lime-dim: #9fbf3a;
+  --color-muted: #8a8f98;
+  --color-danger: #ff6b6b;
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+}
+
+html {
+  background: var(--color-ink);
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1; /* tabular numbers so prices don't jiggle */
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+/* hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
